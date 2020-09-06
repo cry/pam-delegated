@@ -6,7 +6,7 @@
 #include <security/pam_modules.h>
 #include <curl/curl.h>
 
-// todo(cali): implement
+// todo(cry): implement
 int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** argv) {
     return 1;
 }
