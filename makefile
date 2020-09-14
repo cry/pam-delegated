@@ -9,7 +9,9 @@ vpath %.cpp src
 
 .PHONY: all
 
-all: pam-delegated.so bin/test
+all: pam-delegated.so test
+
+test: bin/test
 
 obj/%.o: %.cpp | obj
 	$(CC) $(CXXFLAGS) -fPIC -c -o $@ $<
@@ -27,4 +29,4 @@ bin:
 	mkdir -p $@
 
 clean:
-	rm -f *.o *.so
+	rm -f */*.o */*.so bin/*
