@@ -1,5 +1,6 @@
 #include <vector>
-#include <optional>
+
+#include "tl/optional.hpp"
 
 namespace Config
 {
@@ -11,5 +12,5 @@ namespace Config
         std::vector<Url_t> remotes;
     } Config_t;
 
-    std::optional<Config_t> parse(int flags, int argc, const char **argv);
+    tl::optional<Config_t> parse(int flags, int argc, const char **argv);
 } // namespace Config
