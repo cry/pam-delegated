@@ -26,6 +26,7 @@ namespace Config
                          return std::string(argv[i]);
                      });
 
-        return ToOptions(lines).and_then(CreateFromOptions);
+        return ToOptions(lines)
+            .and_then(CreateFromOptions);
     }
 } // namespace Config
